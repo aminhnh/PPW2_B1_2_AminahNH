@@ -13,6 +13,8 @@ use Illuminate\Http\RedirectResponse;
 //import Facade "Storage"
 use Illuminate\Support\Facades\Storage;
 
+use App\Models\Post;
+
 class PostController extends Controller
 {    
     /**
@@ -23,10 +25,10 @@ class PostController extends Controller
     public function index(): View
     {
         //get posts
-        Post::latest()->paginate(5);
+        $posts = Post::latest()->paginate(5);
 
         //render view with posts
-        return view('index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -36,7 +38,7 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('create');
+        return view('posts.create');
     }
  
     /**

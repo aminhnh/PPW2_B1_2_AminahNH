@@ -20,7 +20,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                             
                                 <!-- error message untuk title -->
                                 @error('image')
@@ -32,7 +32,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Post">
+                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Post">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -44,7 +44,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">KONTEN</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
+                                <textarea id="content" class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
